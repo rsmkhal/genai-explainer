@@ -6,7 +6,6 @@ const Home = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 to-purple-900 mix-blend-multiply"></div>
-          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80" alt="Abstract AI generated art" className="w-full h-full object-cover" />
         </div>
         <div className="relative px-4 py-32 sm:px-6 sm:py-40 lg:py-48 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
