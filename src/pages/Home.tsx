@@ -31,7 +31,7 @@ const Home = () => {
               Explore the World of Generative AI
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-              This interactive site guides you through the fascinating
+              This interactive site guides you through the
               technology behind text-to-image AI models.
             </p>
           </div>
