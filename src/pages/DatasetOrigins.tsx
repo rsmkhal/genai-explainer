@@ -20,7 +20,8 @@ const DatasetOrigins = () => {
           {/* Web‑Scraped */}
           <h4 className="text-xl font-semibold text-gray-800 mb-2">Web‑Scraped Mega‑Sets</h4>
           <p className="text-gray-700 mb-4">
-            The backbone of nearly every large‑scale model (DALL·E 2, Stable Diffusion, Imagen, Midjourney) is a giant, automatically collected corpus. Web crawlers visit open websites—Flickr, Pinterest, Tumblr, personal blogs—and download any image accompanied by surrounding text or alt‑text.  A weak heuristic (e.g., <code>&lt;img alt="…"&gt;</code>) links the image to a caption.  Because no human reviews the pairs, quality varies wildly: detailed captions like “Golden retriever catching a frisbee in Central Park, shot at f/1.8” sit next to tags such as “IMG_0487.JPG”.  The <a className="text-blue-600 underline" href="https://laion.ai/blog/laion-5b/" target="_blank" rel="noopener noreferrer">LAION‑5B</a> release is the best‑known public example, weighing in at 240 TB and more than <b>five billion</b> pairs (Schuhmann et al., 2022).
+            The backbone of nearly every large‑scale model (DALL·E 2, Stable Diffusion, Imagen, Midjourney) is a giant, automatically collected corpus. Web crawlers visit open websites—Flickr, Pinterest, Tumblr, personal blogs—and download any image accompanied by surrounding text or alt‑text.  A weak heuristic (e.g., <code>&lt;img alt="…"&gt;</code>) links the image to a caption.  Because no human reviews the pairs, quality varies wildly: detailed captions like “Golden retriever catching a frisbee in Central Park, shot at f/1.8” 
+            sit next to tags such as “IMG_0487.JPG”.  The LAION‑5B release is the best‑known public example, weighing in at 240 TB and more than <b>five billion</b> pairs (Schuhmann et al., 2022).
           </p>
         {/* Web-scraped advantages / drawbacks */}
 <p className="text-gray-700 mb-2">
@@ -38,7 +39,7 @@ const DatasetOrigins = () => {
           {/* Curated */}
           <h4 className="text-xl font-semibold text-gray-800 mb-2">Expert‑Curated Datasets</h4>
           <p className="text-gray-700 mb-4">
-            Vision researchers have spent the last decade hand‑annotating smaller—but meticulously verified—datasets such as <a className="text-blue-600 underline" href="https://cocodataset.org/#home" target="_blank" rel="noopener noreferrer">MS COCO</a> (330k images, five captions each) and <a className="text-blue-600 underline" href="https://visualgenome.org/" target="_blank" rel="noopener noreferrer">Visual Genome</a> (108k images with region‑level descriptions).  Annotators describe objects, attributes, and relationships in plain English, yielding high‑fidelity linguistic supervision.  Although tiny compared with LAION‑scale corpora, these “gold sets” are often mixed in to anchor the model’s language grounding.
+            Vision researchers have spent the last decade hand‑annotating smaller—but meticulously verified—datasets such as MS COCO (330k images, five captions each) and Visual Genome (108k images with region‑level descriptions).  Annotators describe objects, attributes, and relationships in plain English, yielding high‑fidelity linguistic supervision.  Although tiny compared with LAION‑scale corpora, these “gold sets” are often mixed in to anchor the model’s language grounding.
           </p>
           <p className="text-gray-700 mb-4">
             Commercial labs sometimes commission bespoke data: e‑commerce catalogs with product descriptions, medical archives with radiologist notes, or museum collections with curator metadata.  Because access is restricted or licensed, these slices rarely enter the public domain.
@@ -66,7 +67,7 @@ const DatasetOrigins = () => {
             <li><b>Semantic Safety Nets —</b> some labs discard captions that mention real children’s names, personal addresses, or medical IDs.</li>
           </ul>
           <p className="text-gray-700 mb-4">
-            Despite these pipelines, studies still uncover biases: e.g., occupation prompts (“CEO”, “nurse”) skew heavily toward Western gender stereotypes (Birhane et al., 2021).  Because no public crawler can match human nuance, residual bias is inevitable.
+            Despite these pipelines, studies still uncover biases: e.g., occupation prompts (“CEO”, “nurse”) skew heavily toward Western gender stereotypes (Prabhu & Birhane, 2021).  Because no public crawler can match human nuance, residual bias is inevitable.
           </p>
 
           {/* Licensing Box */}
@@ -80,9 +81,9 @@ const DatasetOrigins = () => {
           <h4 className="text-xl font-semibold text-gray-800 mb-3">References</h4>
           <ul className="list-disc list-inside ml-6 text-gray-600 space-y-1 text-sm">
             <li>Schuhmann, C., et al. (2022). LAION‑5B. <a href="https://laion.ai/blog/laion-5b/" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">https://laion.ai/blog/laion-5b/</a></li>
-            <li>Lin, T.-Y., et al. (2014). MS COCO. <a href="https://arxiv.org/abs/1405.0312" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">https://cocodataset.org</a></li>
-            <li>Krishna, R., et al. (2017). Visual Genome. <a href="https://visualgenome.org/" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">https://visualgenome.org</a></li>
-            <li>Birhane, A., et al. (2021). Large Datasets: A Pyrrhic Win? <a href="https://arxiv.org/abs/2006.169233" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">arXiv:2103.12583</a></li>
+            <li>Lin, T.-Y., et al. (2014). MS COCO. <a href="https://arxiv.org/abs/1405.0312" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/1405.0312</a></li>
+            <li>Krishna, R., et al. (2017). Visual Genome. <a href="https://arxiv.org/abs/1602.07332" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/1602.07332</a></li>
+            <li>Prabhu & Birhane (2021). Large Datasets: A Pyrrhic Win? <a href="https://arxiv.org/abs/2006.16923" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2006.16923</a></li>
             <li>Harvard Business Review. (2023). Generative AI’s Intellectual Property Problem. <a href="https://hbr.org/2023/04/generative-ai-has-an-intellectual-property-problem" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">https://hbr.org</a></li>
           </ul>
         </article>
