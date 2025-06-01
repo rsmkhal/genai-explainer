@@ -42,12 +42,8 @@ const Introduction = () => {
 
           {/* Interactive Pipeline Explanation */}
           <p className="text-gray-700 mb-4">
-            Explore our interactive Drag-and-Drop Pipeline Builder to visualize the process:
+            <b>Explore our interactive Drag-and-Drop Pipeline Builder to visualize the process:</b>
           </p>
-          <ul className="list-disc list-inside ml-6 text-gray-700 space-y-1">
-            <li><strong>Prompt → Tokenization → Embedding → Image</strong></li>
-            <li>Click on each step for brief explanations and related resources.</li>
-          </ul>
           <PipelineDragAndDrop />
         </div>
 
