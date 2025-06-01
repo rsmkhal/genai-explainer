@@ -8,6 +8,9 @@ const navItems = [{
   name: 'Generative Models',
   path: '/generative-models'
 }, {
+  name: 'Dataset Origins',
+  path: '/dataset-origins'
+}, {
   name: 'Captioning',
   path: '/captioning'
 }, {
@@ -23,14 +26,11 @@ const navItems = [{
   name: 'Prompt Engineering',
   path: '/prompt-engineering'
 }, {
-  name: 'Legal & Ethical',
+  name: 'Ethics',
   path: '/legal-ethical'
 }, {
   name: 'Deep Dive',
   path: '/deep-dive'
-}, {
-  name: 'How to Use',
-  path: '/how-to-use'
 }, {
   name: 'References',
   path: '/references'
