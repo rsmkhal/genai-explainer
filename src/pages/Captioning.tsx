@@ -35,10 +35,14 @@ const CaptioningTokenization = () => {
           <p className="text-gray-700 mb-4">
             In practice, embeddings capture nuances like style ("baroque" vs. "minimalist"), mood ("somber", "playful"), or even specific artists’ names.  Downstream diffusion or decoder modules then condition on these vectors when generating images (Rombach&nbsp;et&nbsp;al., 2022).
           </p>
-          <ul className="list-disc list-inside ml-6 text-gray-700 space-y-1 mb-4">
-            <li><span className="text-green-700 font-medium">Benefit:</span> Compact representation—thousands of possible tokens map to a manageable vector size.</li>
-            <li><span className="text-red-600 font-medium">Limitation:</span> Learned associations inherit biases from the training text corpus; e.g., word "doctor" may sit closer to male pronouns.</li>
-          </ul>
+          <p className="text-gray-700 mb-2">
+  <span className="font-semibold text-green-700">Advantages: </span>
+  Compact representation—thousands of possible tokens map to a manageable vector size.
+</p>
+<p className="text-gray-700 mb-4">
+  <span className="font-semibold text-red-600">Drawbacks: </span>
+  Learned associations inherit biases from the training text corpus; e.g., word "doctor" may sit closer to male pronouns.
+</p>
         </article>
 
         {/* 3. Automated Captioning Pipelines */}
