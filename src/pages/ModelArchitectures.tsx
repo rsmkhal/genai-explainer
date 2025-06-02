@@ -90,9 +90,9 @@ const ModelArchitectures = () => {
           </h3>
           <p className="text-gray-700 mb-4">
             Encoder–decoder families include{" "}
-            <b>Variational Autoencoders (VAEs)</b> (Kingma & Welling, 2013) and{" "}
+            <b>Variational Autoencoders (VAEs)</b> and{" "}
             <b>Generative Adversarial Networks (GANs)</b>{" "}
-            (Goodfellow et al., 2014). Both compress images into latent codes
+            (Generative AI Lab, 2024). Both compress images into latent codes
             then reconstruct them.
           </p>
           <h4 className="text-lg font-semibold text-gray-800 mb-2">VAEs</h4>
@@ -200,6 +200,18 @@ const ModelArchitectures = () => {
             References
           </h4>
           <ul className="list-disc list-inside ml-6 text-gray-600 space-y-1 text-sm">
+              <li>
+              Generative AI Lab (2024).{" "}
+              <i>Comparing Diffusion, GAN, and VAE Techniques</i>{" "}
+              <a
+                href="https://generativeailab.org/l/generative-ai/a-tale-of-three-generative-models-comparing-diffusion-gan-and-vae-techniques/569/"
+                className="text-blue-600 underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                generativeailab.org
+              </a>
+            </li>
             <li>
               Ho, J., et al. (2020).{" "}
               <i>Denoising Diffusion Probabilistic Models.</i>{" "}
@@ -216,17 +228,17 @@ const ModelArchitectures = () => {
               Rombach, R., et al. (2022).{" "}
               <i>High‑Resolution Image Synthesis with Latent Diffusion.</i>{" "}
               <a
-                href="https://arxiv.org/abs/2112.10752"
+                href="https://openaccess.thecvf.com/content/CVPR2022/papers/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.pdf"
                 className="text-blue-600 underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                arXiv:2112.10752
+                openaccess.thecvf.com
               </a>
             </li>
             <li>
               Saharia, C., et al. (2022).{" "}
-              <i>Imagen: Photorealistic Text‑to‑Image Generation.</i>{" "}
+              <i>Photorealistic Text‑to‑Image Generation.</i>{" "}
               <a
                 href="https://arxiv.org/abs/2205.11487"
                 className="text-blue-600 underline"
@@ -234,29 +246,6 @@ const ModelArchitectures = () => {
                 rel="noopener noreferrer"
               >
                 arXiv:2205.11487
-              </a>
-            </li>
-            <li>
-              Kingma, D., & Welling, M. (2013).{" "}
-              <i>Auto‑Encoding Variational Bayes.</i>{" "}
-              <a
-                href="https://arxiv.org/abs/1312.6114"
-                className="text-blue-600 underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                arXiv:1312.6114
-              </a>
-            </li>
-            <li>
-              Goodfellow, I., et al. (2014). <i>Generative Adversarial Nets.</i>{" "}
-              <a
-                href="https://papers.nips.cc/paper_files/paper/2014/hash/5ca3e9b122f61f8f06494c97b1afccf3-Abstract.html"
-                className="text-blue-600 underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                NIPS 2014
               </a>
             </li>
             <li>
