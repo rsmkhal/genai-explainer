@@ -64,7 +64,7 @@ const ModelArchitectures = () => {
             trick “predict the next token” to pixels. Images are quantised into
             discrete codes (e.g., using a VQ‑VAE) and a transformer predicts one
             code at a time, raster‑scan order. OpenAI’s original DALL·E
-            (Ramesh et al., 2021) and DALL·E Mini both use this recipe.
+            and DALL·E Mini both use this recipe.
           </p>
           <p className="text-gray-700 mb-2">
             <span className="font-semibold text-green-700">Advantages: </span>
@@ -234,18 +234,6 @@ const ModelArchitectures = () => {
                 rel="noopener noreferrer"
               >
                 arXiv:2205.11487
-              </a>
-            </li>
-            <li>
-              Ramesh, A., et al. (2021).{" "}
-              <i>DALL·E: Creating Images from Text.</i>{" "}
-              <a
-                href="https://arxiv.org/abs/2102.12092"
-                className="text-blue-600 underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                arXiv:2102.12092
               </a>
             </li>
             <li>

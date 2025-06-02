@@ -238,15 +238,6 @@ const GenerativeModels = () => {
             <li>
               Diffusion Models:{" "}
               <a
-                href="https://arxiv.org/abs/2112.10752"
-                className="text-blue-600 underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Rombach et al., 2022
-              </a>
-              ,{" "}
-              <a
                 href="https://openai.com/blog/dall-e/"
                 className="text-blue-600 underline"
                 target="_blank"
