@@ -61,7 +61,7 @@ export default function PipelineDragAndDrop() {
   return (
     <div className="my-8 p-6 bg-gray-50 rounded-xl shadow-md max-w-2xl mx-auto">
       <h3 className="text-2xl font-semibold mb-4 text-center">
-        Arrange the Pipeline Steps in Order
+        Arrange Steps in Order
       </h3>
       <ul className="space-y-4">
         {steps.map((step, idx) => (
