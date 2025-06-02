@@ -1,7 +1,8 @@
-import React from 'react';
-import StartHereButton from '../components/StartHereButton';
+import React from "react";
+import StartHereButton from "../components/StartHereButton";
 const Home = () => {
-  return <div className="bg-white w-full">
+  return (
+    <div className="bg-white w-full">
       {/* Hero section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
@@ -31,8 +32,8 @@ const Home = () => {
               Explore the World of Generative AI
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-              This interactive site guides you through the
-              technology behind text-to-image AI models.
+              This interactive site guides you through the technology behind
+              text-to-image AI models.
             </p>
           </div>
           <div className="mt-16">
@@ -75,6 +76,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 export default Home;
