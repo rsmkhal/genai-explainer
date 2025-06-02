@@ -34,16 +34,16 @@ const ModelArchitectures = () => {
             inference, the model starts from pure noise and iteratively
             denoises, guided by the text embedding supplied by CLIP or T5.
           </p>
-            <p className="text-gray-700 mb-2">
-              <span className="font-semibold text-green-700">Advantages: </span>
-              state‑of‑the‑art fidelity, fine control via classifier‑free
-              guidance, graceful handling of complex global structure.
-            </p>
-            <p className="text-gray-700 mb-2">
-              <span className="font-semibold text-red-600">Drawbacks: </span>
-              50–200 denoise steps per sample; heavy GPU/TPU memory; slow on
-              edge devices.
-            </p>
+          <p className="text-gray-700 mb-2">
+            <span className="font-semibold text-green-700">Advantages: </span>
+            state‑of‑the‑art fidelity, fine control via classifier‑free
+            guidance, graceful handling of complex global structure.
+          </p>
+          <p className="text-gray-700 mb-2">
+            <span className="font-semibold text-red-600">Drawbacks: </span>
+            50–200 denoise steps per sample; heavy GPU/TPU memory; slow on edge
+            devices.
+          </p>
           <p className="text-gray-700 mb-4">
             Notable variants include <i>Latent Diffusion</i>{" "}
             (Rombach&nbsp;et&nbsp;al., 2022), which moves the process into a
@@ -66,17 +66,16 @@ const ModelArchitectures = () => {
             code at a time, raster‑scan order. OpenAI’s original DALL·E
             (Ramesh et al., 2021) and DALL·E Mini both use this recipe.
           </p>
-            <p className="text-gray-700 mb-2">
-              <span className="font-semibold text-green-700">Advantages: </span>
-              straightforward likelihood training; fine‑grained text
-              conditioning without guidance tricks; single forward pass per
-              token.
-            </p>
-            <p className="text-gray-700 mb-2">
-              <span className="font-semibold text-red-600">Drawbacks: </span>
-              generation time scales with image area (e.g., 256×256 → 65,536
-              tokens); produced images can exhibit block‑wise artefacts.
-            </p>
+          <p className="text-gray-700 mb-2">
+            <span className="font-semibold text-green-700">Advantages: </span>
+            straightforward likelihood training; fine‑grained text conditioning
+            without guidance tricks; single forward pass per token.
+          </p>
+          <p className="text-gray-700 mb-2">
+            <span className="font-semibold text-red-600">Drawbacks: </span>
+            generation time scales with image area (e.g., 256×256 → 65,536
+            tokens); produced images can exhibit block‑wise artefacts.
+          </p>
           <p className="text-gray-700 mb-4">
             AR transformers remain attractive for research on{" "}
             <em>semantic compositionality</em>—they tend to respect object
@@ -140,7 +139,9 @@ const ModelArchitectures = () => {
                     Sample quality
                   </td>
                   <td className="border px-4 py-2">Highest photorealism</td>
-                  <td className="border px-4 py-2">Visibly blocky at high resolutions</td>
+                  <td className="border px-4 py-2">
+                    Visibly blocky at high resolutions
+                  </td>
                   <td className="border px-4 py-2">Sharp (GAN) / Soft (VAE)</td>
                 </tr>
                 <tr>
@@ -148,7 +149,9 @@ const ModelArchitectures = () => {
                     Inference speed
                   </td>
                   <td className="border px-4 py-2">Slow (dozens of steps)</td>
-                  <td className="border px-4 py-2">Slower at higher resolutions</td>
+                  <td className="border px-4 py-2">
+                    Slower at higher resolutions
+                  </td>
                   <td className="border px-4 py-2">Fast (single pass)</td>
                 </tr>
                 <tr>
@@ -161,9 +164,15 @@ const ModelArchitectures = () => {
                 </tr>
                 <tr>
                   <td className="border px-4 py-2 font-medium">Compute cost</td>
-                  <td className="border px-4 py-2">High (requires large GPU/TPU memory)</td>
-                  <td className="border px-4 py-2">Very high (long sequences → slow, memory-intensive)</td>
-                  <td className="border px-4 py-2">Low to moderate (single-pass inference)</td>
+                  <td className="border px-4 py-2">
+                    High (requires large GPU/TPU memory)
+                  </td>
+                  <td className="border px-4 py-2">
+                    Very high (long sequences → slow, memory-intensive)
+                  </td>
+                  <td className="border px-4 py-2">
+                    Low to moderate (single-pass inference)
+                  </td>
                 </tr>
               </tbody>
             </table>
