@@ -1,12 +1,22 @@
-import React from 'react';
-import StartHereButton from '../components/StartHereButton';
+import React from "react";
+import StartHereButton from "../components/StartHereButton";
 const Home = () => {
-  return <div className="bg-white w-full">
+  return (
+    <div className="bg-white w-full">
       {/* Hero section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
+          {/* Background image with cover fit */}
+          <img
+            src="https://plus.unsplash.com/premium_photo-1676494236961-6f287c2eabda?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 to-purple-900 mix-blend-multiply"></div>
         </div>
+
+        {/* Text content */}
         <div className="relative px-4 py-32 sm:px-6 sm:py-40 lg:py-48 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -23,6 +33,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       {/* Overview section */}
       <div className="py-16 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,8 +42,8 @@ const Home = () => {
               Explore the World of Generative AI
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-              This interactive site guides you through the
-              technology behind text-to-image AI models.
+              This interactive site guides you through the technology behind
+              text-to-image AI models.
             </p>
           </div>
           <div className="mt-16">
@@ -75,6 +86,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 export default Home;

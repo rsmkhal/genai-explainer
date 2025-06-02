@@ -1,22 +1,23 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import Introduction from './pages/Introduction';
-import GenerativeModels from './pages/GenerativeModels';
-import Captioning from './pages/Captioning';
-import ModelArchitectures from './pages/ModelArchitectures';
-import PromptDemo from './pages/PromptDemo';
-import ModelComparison from './pages/ModelComparison';
-import PromptEngineering from './pages/PromptEngineering';
-import LegalEthical from './pages/LegalEthical';
-import DeepDive from './pages/DeepDive';
-import References from './pages/References';
-import DatasetOrigins from './pages/DatasetOrigins';
+import React from "react";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import Introduction from "./pages/Introduction";
+import GenerativeModels from "./pages/GenerativeModels";
+import Captioning from "./pages/Captioning";
+import ModelArchitectures from "./pages/ModelArchitectures";
+import PromptDemo from "./pages/PromptDemo";
+import ModelComparison from "./pages/ModelComparison";
+import PromptEngineering from "./pages/PromptEngineering";
+import LegalEthical from "./pages/LegalEthical";
+import DeepDive from "./pages/DeepDive";
+import References from "./pages/References";
+import DatasetOrigins from "./pages/DatasetOrigins";
 
 export function App() {
   // Using HashRouter instead of BrowserRouter for GitHub Pages compatibility
-  return <HashRouter>
+  return (
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -33,5 +34,6 @@ export function App() {
           <Route path="references" element={<References />} />
         </Route>
       </Routes>
-    </HashRouter>;
+    </HashRouter>
+  );
 }
