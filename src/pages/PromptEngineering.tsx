@@ -7,6 +7,37 @@ const PromptEngineering = () => (
         Prompt Engineering Tips
       </h2>
 
+      {/*Side-by-side illustration (baseline vs. engineered)*/}
+      <figure className="mb-14">
+        <div className="flex flex-col gap-6 md:flex-row md:gap-8">
+          {/* Baseline */}
+          <div className="flex-1 text-center">
+            <img
+              src="docs/images/biased/professor_baseline.webp"
+              alt='Flux “photo portrait of a professor” (baseline prompt)'
+              className="mx-auto rounded-lg shadow-md"
+            />
+            <figcaption className="mt-2 text-sm text-gray-500 italic">
+              Baseline prompt — “a photo portrait of a professor.”
+              Output skews toward a single demographic.
+            </figcaption>
+          </div>
+
+          {/* Engineered */}
+          <div className="flex-1 text-center">
+            <img
+              src="docs/images/biased/professor_engineered.webp"
+              alt='Flux output after prompt engineering for diversity'
+              className="mx-auto rounded-lg shadow-md"
+            />
+            <figcaption className="mt-2 text-sm text-gray-500 italic">
+              Output after using a combination of prompt engineering tactics. Notice broader
+              representation.
+            </figcaption>
+          </div>
+        </div>
+      </figure>
+
       {/* Overview */}
       <article className="mb-14">
         <p className="text-gray-700 mb-4">
@@ -26,21 +57,26 @@ const PromptEngineering = () => (
         <p className="text-gray-700 mb-2">
           <span className="font-semibold">1. Be specific &mdash;</span> name the
           main subject, context, and style. “Dog” is vague; “Shiba Inu wearing a
-          red scarf, studio lighting” is clearer (Stable Diffusion Documentation, 2022).
+          red scarf, studio lighting” is clearer (Stable Diffusion Documentation,
+          2022).
         </p>
         <p className="text-gray-700 mb-2">
           <span className="font-semibold">2. Use logical order &mdash;</span>{" "}
           list concepts from large-scale to fine detail (scene → subject →
-          lighting → lens) so the model weights terms predictably (Stable Diffusion Documentation, 2022).
+          lighting → lens) so the model weights terms predictably (Stable
+          Diffusion Documentation, 2022).
         </p>
         <p className="text-gray-700 mb-2">
           <span className="font-semibold">3. Include style cues &mdash;</span>{" "}
-          art movement, camera type, film stock, or color palette (“oil painting, Baroque style, warm tones”) help anchor aesthetics (Stable Diffusion Documentation, 2022).
+          art movement, camera type, film stock, or color palette (“oil
+          painting, Baroque style, warm tones”) help anchor aesthetics (Stable
+          Diffusion Documentation, 2022).
         </p>
         <p className="text-gray-700">
           <span className="font-semibold">4. Isolate composition words &mdash;</span>{" "}
           if spatial layout matters, spell it out: “A cat <em>on the left</em>,
-          a dog <em>on the right</em>, white background” (Stable Diffusion Documentation, 2022).
+          a dog <em>on the right</em>, white background” (Stable Diffusion
+          Documentation, 2022).
         </p>
       </article>
 
@@ -53,14 +89,15 @@ const PromptEngineering = () => (
           Diffusion UIs such as Stable Diffusion WebUI include a separate{" "}
           <b>Negative Prompt</b> box. Put <em>undesired</em> elements there
           (“blurry, extra limbs, watermark, text”) so the sampler steers away
-          from them (Stable Diffusion Documentation, 2022). Avoid stuffing negatives in the main
-          prompt&mdash;they compete with your positive tokens.
+          from them (Stable Diffusion Documentation, 2022). Avoid stuffing
+          negatives in the main prompt&mdash;they compete with your positive
+          tokens.
         </p>
 
         <p className="text-gray-700 mb-2">
           <span className="font-semibold text-green-700">Good practice:</span>{" "}
           Main Prompt&nbsp;&nbsp;— “Portrait photo of an astronaut riding a
-          horse, 35 mm film, dusk”<br />
+          horse, 35&nbsp;mm film, dusk”<br />
           Negative Prompt&nbsp;&nbsp;— “low quality, blurry, text, watermark,
           distorted proportions”
         </p>
@@ -68,7 +105,8 @@ const PromptEngineering = () => (
         <p className="text-gray-700">
           <span className="font-semibold text-red-600">Common mistake:</span>{" "}
           listing negatives inside the main prompt (“…without blur, no text”)
-          which can confuse weighting and still let artifacts slip through (Stable Diffusion Documentation, 2022).
+          which can confuse weighting and still let artifacts slip through
+          (Stable Diffusion Documentation, 2022).
         </p>
       </article>
 
@@ -85,7 +123,7 @@ const PromptEngineering = () => (
           <p className="text-gray-700 mt-2">
             <b>After&nbsp;(clear):</b> “Wide-angle sunrise shot of the Swiss
             Alps, low-lying mist in the valley, golden hour lighting, Fujifilm
-            Velvia 50.”
+            Velvia&nbsp;50.”
           </p>
         </div>
 
@@ -111,7 +149,8 @@ const PromptEngineering = () => (
         <p className="text-gray-700 mb-2">
           <span className="font-semibold">Weighted tokens ( ) / [ ] &mdash;</span>{" "}
           Many UIs let you boost or down-weight tokens with parentheses,
-          directing attention to key elements (Stable Diffusion Documentation, 2022).
+          directing attention to key elements (Stable Diffusion Documentation,
+          2022).
         </p>
         <p className="text-gray-700">
           <span className="font-semibold">Multi-pass refinement &mdash;</span>{" "}
@@ -136,7 +175,7 @@ const PromptEngineering = () => (
         </p>
         <p className="text-gray-700">
           <b>Ignoring bias cues:</b> Prompts like “CEO” may default to a narrow
-          demographic; specify diversity if relevant (Birhane et al., 2021).
+          demographic; specify diversity if relevant (Prabhu & Birhane, 2021).
         </p>
       </article>
 
@@ -155,7 +194,8 @@ const PromptEngineering = () => (
             </a>
           </li>
           <li>
-            Stable Diffusion Documentation. (2022). <i>Prompt Engineering Guide.</i>{" "}
+            Stable Diffusion Documentation. (2022).{" "}
+            <i>Prompt Engineering Guide.</i>{" "}
             <a
               href="https://stable-diffusion-art.com/prompt-guide/"
               className="text-blue-600 underline"
@@ -165,13 +205,14 @@ const PromptEngineering = () => (
             </a>
           </li>
           <li>
-            Birhane, A., et al. (2021). <i>Large Datasets: A Pyrrhic Win for Computer Vision?</i>{" "}
+            Prabhu & Birhane (2021).{" "}
+            <i>Large Datasets: A Pyrrhic Win for Computer Vision?</i>{" "}
             <a
-              href="https://arxiv.org/abs/2103.12583"
+              href="https://arxiv.org/abs/2006.16923"
               className="text-blue-600 underline"
               target="_blank"
             >
-              arXiv:2103.12583
+              arXiv:2006.16923
             </a>
           </li>
         </ul>
