@@ -1,5 +1,6 @@
 import React from "react";
 import StartHereButton from "../components/StartHereButton";
+
 const Home = () => {
   return (
     <div className="bg-white w-full">
@@ -46,42 +47,40 @@ const Home = () => {
               text-to-image AI models.
             </p>
           </div>
-          <div className="mt-16">
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {/* Topic previews */}
-              <div className="bg-white shadow-md rounded-lg overflow-hidden">
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900">
-                    How Generative Models Learn
-                  </h3>
-                  <p className="mt-2 text-base text-gray-500">
-                    Discover how AI models are trained on massive datasets of
-                    images and captions.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-white shadow-md rounded-lg overflow-hidden">
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900">
-                    Interactive Demos
-                  </h3>
-                  <p className="mt-2 text-base text-gray-500">
-                    Experience how small changes to prompts can dramatically
-                    affect generated images.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-white shadow-md rounded-lg overflow-hidden">
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900">
-                    Ethical Considerations
-                  </h3>
-                  <p className="mt-2 text-base text-gray-500">
-                    Explore the legal and ethical implications of AI-generated
-                    imagery.
-                  </p>
-                </div>
-              </div>
+
+          {/* Section label for clarity */}
+          <h3 className="text-xl font-semibold text-gray-800 mb-6 mt-12 text-center">
+            What You'll Learn
+          </h3>
+
+          {/* Overview Cards */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h4 className="text-lg font-semibold text-gray-900">
+                How Generative Models Learn
+              </h4>
+              <p className="mt-2 text-base text-gray-600">
+                Discover how AI models are trained on massive datasets of
+                images and captions—and how they generalize from them.
+              </p>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h4 className="text-lg font-semibold text-gray-900">
+                Interactive Demos
+              </h4>
+              <p className="mt-2 text-base text-gray-600">
+                See how small changes to text prompts can dramatically change
+                image outputs through live examples.
+              </p>
+            </div>
+            <div className="bg-white border border-gray-200 rounded-lg p-6">
+              <h4 className="text-lg font-semibold text-gray-900">
+                Ethical Considerations
+              </h4>
+              <p className="mt-2 text-base text-gray-600">
+                Understand the legal, ethical, and environmental impacts of
+                generative AI, including bias and copyright concerns.
+              </p>
             </div>
           </div>
         </div>
@@ -89,4 +88,5 @@ const Home = () => {
     </div>
   );
 };
+
 export default Home;
