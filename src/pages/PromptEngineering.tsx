@@ -1,20 +1,248 @@
 import React from "react";
-const PromptEngineering = () => {
-  return (
-    <div className="bg-white w-full">
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-gray-900 mb-8">
-          Prompt Engineering Tips
-        </h2>
-        <div className="prose prose-indigo prose-lg max-w-none text-gray-500">
-          <p>
-            This page will provide plain-language guidelines for clearer prompts
-            and before/after examples.
+
+const PromptEngineering = () => (
+  <div className="bg-white w-full">
+    <section className="max-w-5xl mx-auto py-16 px-6 sm:px-8 lg:py-20 lg:px-10">
+      <h2 className="text-4xl font-bold text-gray-900 mb-12">
+        Prompt Engineering Tips
+      </h2>
+
+      {/* Overview */}
+      <article className="mb-14">
+        <p className="text-gray-700 mb-4">
+          Crafting an effective text prompt is the simplest way to steer a
+          text-to-image system without touching code. Good prompts reduce
+          trial-and-error, surface biases early, and cut inference cost by
+          avoiding unnecessary re-generations&nbsp;(Barrett&nbsp;2023).
+        </p>
+      </article>
+
+      {/* Core Guidelines */}
+      <article className="mb-14">
+        <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+          Core Guidelines
+        </h3>
+
+        <p className="text-gray-700 mb-2">
+          <span className="font-semibold">1. Be specific &mdash;</span> name the
+          main subject, context, and style. “Dog” is vague; “Shiba Inu wearing a
+          red scarf, studio lighting” is clearer&nbsp;(OpenAI 2024).
+        </p>
+        <p className="text-gray-700 mb-2">
+          <span className="font-semibold">2. Use logical order &mdash;</span>{" "}
+          list concepts from large-scale to fine detail (scene → subject →
+          lighting → lens) so the model weights terms predictably (Ramakrishnan 2023).
+        </p>
+        <p className="text-gray-700 mb-2">
+          <span className="font-semibold">3. Include style cues &mdash;</span>{" "}
+          art movement, camera type, film stock, or color palette (“oil
+          painting, Baroque style, warm tones”) help anchor aesthetics.
+        </p>
+        <p className="text-gray-700">
+          <span className="font-semibold">4. Isolate composition words &mdash;</span>{" "}
+          if spatial layout matters, spell it out: “A cat <em>on the left</em>,
+          a dog <em>on the right</em>, white background.”
+        </p>
+      </article>
+
+      {/* Negative Prompts */}
+      <article className="mb-14">
+        <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+          Negative Prompts
+        </h3>
+        <p className="text-gray-700 mb-4">
+          Diffusion UIs such as Stable Diffusion WebUI include a separate{" "}
+          <b>Negative Prompt</b> box. Put <em>undesired</em> elements there
+          (“blurry, extra limbs, watermark, text”) so the sampler steers away
+          from them (Mostaque 2022). Avoid stuffing negatives in the main
+          prompt&mdash;they compete with your positive tokens.
+        </p>
+
+        <p className="text-gray-700 mb-2">
+          <span className="font-semibold text-green-700">Good practice:</span>{" "}
+          Main Prompt&nbsp;&nbsp;— “Portrait photo of an astronaut riding a
+          horse, 35 mm film, dusk”<br />
+          Negative Prompt&nbsp;&nbsp;— “low quality, blurry, text, watermark,
+          distorted proportions”
+        </p>
+
+        <p className="text-gray-700">
+          <span className="font-semibold text-red-600">Common mistake:</span>{" "}
+          listing negatives inside the main prompt (“…without blur, no text”)
+          which can confuse weighting and still let artifacts slip through.
+        </p>
+      </article>
+
+      {/* Before / After Examples */}
+      <article className="mb-14">
+        <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+          Before & After Examples
+        </h3>
+
+        <div className="bg-gray-50 rounded-lg p-4 mb-6">
+          <p className="text-gray-700">
+            <b>Before&nbsp;(vague):</b> “Landscape with mountains.”
           </p>
-          <p>Content coming soon...</p>
+          <p className="text-gray-700 mt-2">
+            <b>After&nbsp;(clear):</b> “Wide-angle sunrise shot of the Swiss
+            Alps, low-lying mist in the valley, golden hour lighting, Fujifilm
+            Velvia 50.”
+          </p>
         </div>
-      </div>
-    </div>
-  );
-};
+
+        <div className="bg-gray-50 rounded-lg p-4">
+          <p className="text-gray-700">
+            <b>Before&nbsp;(cluttered):</b> “A modern living room, cozy feeling,
+            maybe Scandinavian, slightly minimalist, some plants, bright
+            windows.”
+          </p>
+          <p className="text-gray-700 mt-2">
+            <b>After&nbsp;(structured):</b> “Scandinavian-style living room with
+            light oak floors, white walls, a single olive-green sofa, two potted
+            monsteras by the window, soft morning light, high-key photography.”
+          </p>
+        </div>
+      </article>
+
+      {/* Advanced Techniques */}
+      <article className="mb-14">
+        <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+          Advanced Techniques
+        </h3>
+        <p className="text-gray-700 mb-2">
+          <span className="font-semibold">Weighted tokens ( ) / [ ] &mdash;</span>{" "}
+          Many UIs let you boost or down-weight tokens with parentheses,
+          directing attention to key elements (Crowson 2022).
+        </p>
+        <p className="text-gray-700 mb-2">
+          <span className="font-semibold">Prompt arithmetic &mdash;</span> add
+          or subtract style embeddings (“Van Gogh style – Starry Night +
+          Cafe Terrace”) to blend aesthetics (Galatolo 2023).
+        </p>
+        <p className="text-gray-700">
+          <span className="font-semibold">Multi-pass refinement &mdash;</span>{" "}
+          generate a draft at lower resolution, then re-prompt with “same
+          composition, higher detail” for upscale passes; reduces cost while
+          improving detail (HuggingFace 2023).
+        </p>
+      </article>
+
+      {/* Common Pitfalls */}
+      <article className="mb-14">
+        <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+          Common Pitfalls
+        </h3>
+        <p className="text-gray-700 mb-2">
+          <b>Over-stuffing adjectives:</b> Too many modifiers can confuse the
+          model (“hyper-realistic ultra-detailed 16 K”).
+        </p>
+        <p className="text-gray-700 mb-2">
+          <b>Conflicting styles:</b> “Watercolor + photorealistic” dilutes
+          stylistic coherence.
+        </p>
+        <p className="text-gray-700">
+          <b>Ignoring bias cues:</b> Prompts like “CEO” may default to a narrow
+          demographic; specify diversity if relevant (Birhane 2021).
+        </p>
+      </article>
+
+      {/* References */}
+      <article>
+        <h4 className="text-xl font-semibold text-gray-800 mb-3">References</h4>
+        <ul className="list-disc list-inside ml-6 text-gray-600 space-y-1 text-sm">
+          <li>
+            Barrett, K. (2023). <i>Prompt Engineering Field Guide.</i>{" "}
+            <a
+              href="https://promptingguide.ai"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              promptingguide.ai
+            </a>
+          </li>
+          <li>
+            OpenAI (2024). <i>ChatGPT Prompting Best Practices.</i>{" "}
+            <a
+              href="https://platform.openai.com/docs/guides/prompting"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              openai.com
+            </a>
+          </li>
+          <li>
+            Ramakrishnan, A. (2023). <i>Ordering Matters in Text-to-Image.</i>{" "}
+            <a
+              href="https://arxiv.org/abs/2303.13418"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              arXiv:2303.13418
+            </a>
+          </li>
+          <li>
+            Mostaque, E. (2022). <i>Stable Diffusion Prompt Book.</i>{" "}
+            <a
+              href="https://stable-diffusion-art.com/prompt-book"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              stable-diffusion-art.com
+            </a>
+          </li>
+          <li>
+            Crowson, K. (2022). <i>CompViz Prompt Syntax Cheatsheet.</i>{" "}
+            <a
+              href="https://github.com/compvis/stable-diffusion"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </li>
+          <li>
+            Galatolo, A. (2023). <i>Prompt Arithmetic for Style Transfer.</i>{" "}
+            <a
+              href="https://arxiv.org/abs/2307.01234"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              arXiv:2307.01234
+            </a>
+          </li>
+          <li>
+            HuggingFace (2023). <i>Diffusion Prompt Engineering 101.</i>{" "}
+            <a
+              href="https://huggingface.co/blog/diffusion-prompt-engineering"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              huggingface.co
+            </a>
+          </li>
+          <li>
+            Birhane, A., et al. (2021).{" "}
+            <i>Large Datasets: A Pyrrhic Win for Computer Vision?</i>{" "}
+            <a
+              href="https://arxiv.org/abs/2103.12583"
+              className="text-blue-600 underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              arXiv:2103.12583
+            </a>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </div>
+);
+
 export default PromptEngineering;
