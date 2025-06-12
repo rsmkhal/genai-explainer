@@ -105,7 +105,7 @@ const LegalEthical = () => (
         {/* ---- Added illustrative image & caption ---- */}
         <figure className="my-8">
           <img
-            src="docs/images/biased/nurses_flux_biased.webp"
+            src="/genai-explainer/images/biased/nurses_flux_biased.webp"
             alt="Flux output for the prompt 'a photo portrait of a nurse' showing only female-presenting faces"
             className="mx-auto rounded-lg shadow-md"
           />

@@ -13,7 +13,7 @@ const PromptEngineering = () => (
           {/* Baseline */}
           <div className="flex-1 text-center">
             <img
-              src="docs/images/biased/professor_baseline.webp"
+              src="/genai-explainer/images/biased/professor_baseline.webp"
               alt='Flux “photo portrait of a professor” (baseline prompt)'
               className="mx-auto rounded-lg shadow-md"
             />
@@ -26,7 +26,7 @@ const PromptEngineering = () => (
           {/* Engineered */}
           <div className="flex-1 text-center">
             <img
-              src="docs/images/biased/professor_engineered.webp"
+              src="/genai-explainer/images/biased/professor_engineered.webp"
               alt='Flux output after prompt engineering for diversity'
               className="mx-auto rounded-lg shadow-md"
             />
