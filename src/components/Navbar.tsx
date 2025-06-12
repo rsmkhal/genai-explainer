@@ -42,10 +42,6 @@ const navItems = [
     name: "Deep Dive",
     path: "/deep-dive",
   },
-  {
-    name: "References",
-    path: "/references",
-  },
 ];
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
