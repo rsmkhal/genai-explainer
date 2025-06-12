@@ -101,12 +101,25 @@ const LegalEthical = () => (
           generate male images, reinforcing existing societal biases (Birhane et
           al., 2021).
         </p>
+
+        {/* ---- Added illustrative image & caption ---- */}
+        <figure className="my-8">
+          <img
+            src="docs/images/biased/nurses_flux_biased.webp"
+            alt="Flux output for the prompt 'a photo portrait of a nurse' showing only female-presenting faces"
+            className="mx-auto rounded-lg shadow-md"
+          />
+          <figcaption className="mt-2 text-center text-sm text-gray-500 italic">
+            Flux output for the prompt &ldquo;a photo portrait of a nurse.&rdquo;
+            Every face returned is female, illustrating occupational gender bias.
+          </figcaption>
+        </figure>
       </article>
 
       {/* 4. MITIGATION STRATEGIES */}
       <article className="mb-14">
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-          Mitigation Strategies
+          4. Mitigation Strategies
         </h3>
 
         <p className="text-gray-700 mb-2">
@@ -160,7 +173,10 @@ const LegalEthical = () => (
           <li>Provide clear opt-out or removal processes for individuals.</li>
           <li>Conduct bias assessments on standard demographic prompts.</li>
           <li>Clearly label or watermark AI-generated outputs.</li>
-          <li>Publish model transparency cards detailing training, bias assessments, and environmental impact.</li>
+          <li>
+            Publish model transparency cards detailing training, bias assessments,
+            and environmental impact.
+          </li>
         </ul>
       </article>
 
@@ -168,6 +184,7 @@ const LegalEthical = () => (
       <article>
         <h4 className="text-xl font-semibold text-gray-800 mb-3">References</h4>
         <ul className="list-disc list-inside ml-6 text-gray-600 space-y-1 text-sm">
+          {/* (unchanged reference list) */}
           <li>
             Harvard Business Review. (2023). <i>Generative AI Has an Intellectual Property Problem.</i>{" "}
             <a href="https://hbr.org/2023/04/generative-ai-has-an-intellectual-property-problem"
