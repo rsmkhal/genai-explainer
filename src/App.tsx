@@ -11,7 +11,6 @@ import ModelComparison from "./pages/ModelComparison";
 import PromptEngineering from "./pages/PromptEngineering";
 import LegalEthical from "./pages/LegalEthical";
 import DeepDive from "./pages/DeepDive";
-import References from "./pages/References";
 import DatasetOrigins from "./pages/DatasetOrigins";
 
 export function App() {
@@ -31,7 +30,6 @@ export function App() {
           <Route path="prompt-engineering" element={<PromptEngineering />} />
           <Route path="legal-ethical" element={<LegalEthical />} />
           <Route path="deep-dive" element={<DeepDive />} />
-          <Route path="references" element={<References />} />
         </Route>
       </Routes>
     </HashRouter>
