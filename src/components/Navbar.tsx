@@ -38,10 +38,6 @@ const navItems = [
     name: "Ethics",
     path: "/legal-ethical",
   },
-  {
-    name: "Deep Dive",
-    path: "/deep-dive",
-  },
 ];
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
