@@ -1,6 +1,12 @@
-import React from "react";
+// src/pages/Captioning.tsx
+import React, { useEffect } from "react";
 
-const CaptioningTokenization = () => {
+const CaptioningTokenization: React.FC = () => {
+  // Scroll to top when this page mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-white w-full">
       <section className="max-w-5xl mx-auto py-16 px-6 sm:px-8 lg:py-20 lg:px-10">
@@ -14,8 +20,8 @@ const CaptioningTokenization = () => {
             How a Prompt Becomes Numbers
           </h3>
           <p className="text-gray-700 mb-4">
-            A text‑to‑image model cannot operate directly on characters. Instead
-            it converts each prompt into a sequence of integer IDs through{" "}
+            A text-to-image model cannot operate directly on characters. Instead
+            it converts each prompt into a sequence of integer IDs through{' '}
             <strong>tokenization</strong>—the same first step used by large
             language models.
           </p>
@@ -43,18 +49,18 @@ const CaptioningTokenization = () => {
             Embeddings: Adding Meaning to IDs
           </h3>
           <p className="text-gray-700 mb-4">
-            Raw IDs are arbitrary; the model still needs semantic structure. An{" "}
+            Raw IDs are arbitrary; the model still needs semantic structure. An{' '}
             <strong>embedding layer</strong> transforms each ID into a dense
             vector (typically 512–768 dimensions). During training, these
             vectors are adjusted so that semantically related words occupy
-            nearby positions in the high‑dimensional space.
+            nearby positions in the high-dimensional space.
           </p>
           <p className="text-gray-700 mb-4">
             In practice, embeddings capture nuances like style ("baroque" vs.
             "minimalist"), mood ("somber", "playful"), or even specific artists’
             names. Downstream diffusion or decoder modules then condition on
             these vectors when generating images
-            (Rombach&nbsp;et&nbsp;al., 2022).
+            (Rombach&nbsp;et&nbsp;al., 2022).
           </p>
           <p className="text-gray-700 mb-2">
             <span className="font-semibold text-green-700">Advantages: </span>
@@ -71,10 +77,10 @@ const CaptioningTokenization = () => {
         {/* 3. Automated Captioning Pipelines */}
         <article className="mb-14">
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-            Why Models Need Machine‑Generated Captions
+            Why Models Need Machine-Generated Captions
           </h3>
           <p className="text-gray-700 mb-4">
-            For billions of web images no high‑quality human caption exists.
+            For billions of web images no high-quality human caption exists.
             Automated captioning pipelines bridge that gap, pairing visuals with
             text so the model can learn multimodal correspondences at scale.
           </p>
@@ -90,7 +96,7 @@ const CaptioningTokenization = () => {
             </li>
             <li>
               <strong>Language decoder</strong>—an LSTM, Transformer, or
-              GPT‑like head—generates a sentence conditioned on those features
+              GPT-like head—generates a sentence conditioned on those features
               (Vinyals&nbsp;et&nbsp;al., 2015; Li&nbsp;et&nbsp;al., 2023).
             </li>
           </ol>
@@ -137,65 +143,65 @@ const CaptioningTokenization = () => {
               </tbody>
             </table>
           </div>
-        </article>
 
-        {/* References */}
-        <article>
-          <h4 className="text-xl font-semibold text-gray-800 mb-3">
-            References
-          </h4>
-          <ul className="list-disc list-inside ml-6 text-gray-600 space-y-1 text-sm">
-            <li>
-              Radford, A., et al. (2019).{" "}
-              <i>Language Models are Unsupervised Multitask Learners.</i>{" "}
-              <a
-                href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf"
-                className="text-blue-600 underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                OpenAI
-              </a>
-            </li>
-            <li>
-              Rombach, R., et al. (2022).{" "}
-              <i>
-                High‑Resolution Image Synthesis with Latent Diffusion Models.
-              </i>{" "}
-              <a
-                href="https://arxiv.org/abs/2112.10752"
-                className="text-blue-600 underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                arXiv:2112.10752
-              </a>
-            </li>
-            <li>
-              Vinyals, O., et al. (2015).{" "}
-              <i>Show and Tell: A Neural Image Caption Generator.</i>{" "}
-              <a
-                href="https://arxiv.org/abs/1411.4555"
-                className="text-blue-600 underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CVPR
-              </a>
-            </li>
-            <li>
-              Li, X., et al. (2023).{" "}
-              <i>BLIP‑2: Bootstrapping Language–Image Pre‑training.</i>{" "}
-              <a
-                href="https://arxiv.org/abs/2301.12597"
-                className="text-blue-600 underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                arXiv:2301.12597
-              </a>
-            </li>
-          </ul>
+          {/* References */}
+          <article>
+            <h4 className="text-xl font-semibold text-gray-800 mb-3">
+              References
+            </h4>
+            <ul className="list-disc list-inside ml-6 text-gray-600 space-y-1 text-sm">
+              <li>
+                Radford, A., et al. (2019).{' '}
+                <i>Language Models are Unsupervised Multitask Learners.</i>{' '}
+                <a
+                  href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf"
+                  className="text-blue-600 underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  OpenAI
+                </a>
+              </li>
+              <li>
+                Rombach, R., et al. (2022).{' '}
+                <i>
+                  High-Resolution Image Synthesis with Latent Diffusion Models.
+                </i>{' '}
+                <a
+                  href="https://arxiv.org/abs/2112.10752"
+                  className="text-blue-600 underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  arXiv:2112.10752
+                </a>
+              </li>
+              <li>
+                Vinyals, O., et al. (2015).{' '}
+                <i>Show and Tell: A Neural Image Caption Generator.</i>{' '}
+                <a
+                  href="https://arxiv.org/abs/1411.4555"
+                  className="text-blue-600 underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  CVPR
+                </a>
+              </li>
+              <li>
+                Li, X., et al. (2023).{' '}
+                <i>BLIP-2: Bootstrapping Language–Image Pre-training.</i>{' '}
+                <a
+                  href="https://arxiv.org/abs/2301.12597"
+                  className="text-blue-600 underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  arXiv:2301.12597
+                </a>
+              </li>
+            </ul>
+          </article>
         </article>
       </section>
     </div>

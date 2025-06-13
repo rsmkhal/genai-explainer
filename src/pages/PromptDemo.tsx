@@ -1,5 +1,4 @@
-// src/pages/PromptDemo.tsx
-import React, { useState } from 'react';
+import React from 'react';
 import InteractiveDemo, { Option } from '../components/PromptDropDown';
 
 const WOMEN_OPTIONS: Option[] = [
@@ -68,9 +67,7 @@ const CHILDSTYLE_IMAGE_MAP: Record<string, string> = {
   'default-style':          '/genai-explainer/images/childstyle/default-style.png',
 };
 
-
 const PromptDemo: React.FC = () => {
-
   return (
     <div className="max-w-3xl mx-auto space-y-8 p-6">
       <div className="prose mb-8">
@@ -84,8 +81,8 @@ const PromptDemo: React.FC = () => {
         </p>
       </div>
 
-      <div className="prose">
-        <h3 className="text-xl font-medium">Artistic Style Demo</h3>
+      <div className="prose mb-8">
+        <h3 className="text-xl font-medium">Artistic Style</h3>
         <p>
           In this demo, you can apply different artistic styles to the same “child playing in a playground” scene.
           Choose from options like <em>anime style</em>, <em>photorealistic style</em>, or <em>watercolor style</em>,
@@ -98,10 +95,11 @@ const PromptDemo: React.FC = () => {
         options={CHILDSTYLE_OPTIONS}
         imageMap={CHILDSTYLE_IMAGE_MAP}
         defaultValue="3drender-style"
+        showTechnicalNote={true}
       />
 
-      <div className="prose">
-        <h3 className="text-xl font-medium">Camera Angle Demo</h3>
+      <div className="prose mb-8">
+        <h3 className="text-xl font-medium">Camera Angle</h3>
         <p>
           In this demo, you can experiment with camera angles on a scene of a child playing in a playground.
           Use the dropdown to switch between perspectives like <em>birds-eye view</em>, <em>low-angle</em>,
@@ -114,11 +112,11 @@ const PromptDemo: React.FC = () => {
         options={CHILD_OPTIONS}
         imageMap={CHILD_IMAGE_MAP}
         defaultValue="birds-eye-view"
+        showTechnicalNote={false}
       />
 
-      
-      <div className="prose">
-        <h3 className="text-xl font-medium">Lighting Adjustment Demo</h3>
+      <div className="prose mb-8">
+        <h3 className="text-xl font-medium">Lighting Adjustment</h3>
         <p>
           In this demo, you can adjust various lighting conditions applied to an image of a woman sitting in a chair.
           Try selecting options like <em>soft lighting</em>, <em>hard lighting</em>, or <em>rim lighting</em> to see how
@@ -130,11 +128,8 @@ const PromptDemo: React.FC = () => {
         options={WOMEN_OPTIONS}
         imageMap={WOMEN_IMAGE_MAP}
         defaultValue="soft-lighting"
+        showTechnicalNote={false}
       />
-
-      
-
-      
     </div>
   );
 };
