@@ -111,7 +111,7 @@ const LegalEthical = () => (
           />
           <figcaption className="mt-2 text-center text-sm text-gray-500 italic">
             Flux output for the prompt &ldquo;a photo portrait of a nurse.&rdquo;
-            Every face returned is female, illustrating occupational gender bias.
+            Almost every face returned is female, illustrating occupational gender bias.
           </figcaption>
         </figure>
       </article>
